@@ -1,0 +1,29 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #171717;
+    color: ivory;
+}
+
+body a {
+    text-decoration: none;
+    font-weight: bold;
+    color: green;
+}
+
+.navbar {
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: black;
+    height: 60px;
+    font-size: 20px;
+    position: fixed;
+}
+
+.navbar-text a {
+    color: white;
+}

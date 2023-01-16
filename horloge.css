@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: lightseagreen;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .wrapper {
+    font-size: 1px;
+    width: 500em;
+    height: 500em;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    
+    @media ('max-width: 600px) {
+      font-se : 0.15vw;
+    }
+  }
+  .cadran {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 3em solid black;
+    background-color: white;
+    box-shadow: 0 0 30em rgba(black, 0.3);
+  }
+  .centre {
+    z-index: 20;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30em;
+    height: 30em;
+    //box-shadow: 1em 1em 3em white inset;
+    border-radius: 50%;
+    background-color: red;
+  }
+  .secondes,
+  .minutes,
+  .heures {
+    position: absolute;
+  }
+  
+  .secondes {
+    left: 242em;
+    top: 12em;
+    transform-origin: 5em 235em;
+  
+    z-index: 3;
+  
+    &.transition-enabled {
+      transition: transform 90ms cubic-bezier(0.93, 1.79, 0.82, 0.74);
+    }
+    
+      svg {
+      width: 10em;
+      height: 255em;
+        fill: red;
+    }
+  }
+  .minutes {
+    left: 239em;
+    top: 7em;
+    transform-origin: 8em 240em;
+    z-index: 2;
+  
+    svg {
+      width: 16em;
+      height: 250em;
+      fill: black;
+    }
+  }
+  .heures {
+    left: 237em;
+    top: 77em;
+    transform-origin: 10em 170em;
+    z-index: 1;
+  
+    svg {
+      width: 20em;
+      height: 190em;
+      fill: white;
+      stroke: black;
+      stroke-width: 1em;
+    }
+  }
+  .repere {
+    position: absolute;
+    left: 245em;
+    top: 7em;
+    width: 4em;
+    height: 4em;
+    border-radius: 2em;
+    background-color: black;
+    transform-origin: 2em 240em;
+    z-index: 1;
+  }
+  .repere:nth-child(5n + 1) {
+    width: 4em;
+    height: 20em;
+    transform-origin: 2em 240em;
+  }
+  .repere:nth-child(15n + 6) {
+    left: 242em;
+    width: 10em;
+    height: 50em;
+    transform-origin: 5em 240em;
+  }
+  
