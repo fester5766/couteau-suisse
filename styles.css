@@ -33,6 +33,10 @@ body a {
     color: white;
 }
 
+.navbar-text a:hover {
+    opacity: 80%;
+}
+
 .main {
     padding-top: 75px;
     margin-top: 1%;
@@ -58,4 +62,126 @@ body a {
 .outils > div a {
     text-decoration: none;
     color: #171717;
+}
+
+@media only screen and (max-width: 800px) {
+    .outils {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .outils > div {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Horloge */
+
+.horloge {
+    padding-top: 17%;
+    width: 100%;
+    font-family: "Courier New";
+}
+
+.horloge input {
+    width: 100%;
+    font-size: 150px;
+    text-align: center;
+    background-color: #171717;
+    border: none;
+    color: ivory;
+}
+
+@media only screen and (max-width: 800px) {
+    .horloge input {
+        padding-top: 75%;
+        font-size: 75px;
+    }
+}
+
+/* Calculatrice */
+td button {
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    color: black;
+}
+
+td input {
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+}
+
+#c {
+    width: 120px;
+}
+
+.calculatrice-container {
+    padding-top: 7%;
+    text-align: center;
+    width: 100%;
+}
+
+.calculatrice {
+    width: 90%;
+    height: 80%;
+    align-items: center;
+    margin: 0 auto;
+    background-color: orange;
+}
+
+/* Chronomètre */
+
+.chronometre {
+   padding-top: 150px;
+   width: 100%;
+   text-align: center;
+}
+
+.chronometre-display {
+    font-size: 100px;
+    padding: 25px;
+    background-color: #171717;
+    color: ivory;
+    border: none;
+    text-align: center;
+}
+
+.chronometre-button {
+    padding: 25px;
+    margin: 20px;
+    font-size: 25px;
+    background-color: ivory;
+    color: #171717;
+    border-radius: 50px;
+}
+
+
+/* Minuteur */
+
+.minuteur {
+    padding-top: 150px;
+    width: 100%;
+    text-align: center;
+}
+
+.minuteur-display {
+    background-color: #171717;
+    color: ivory;
+    border: none;
+    text-align: center;
+    font-size: 100px;
+    padding: 25px;
+}
+
+.minuteur-button {
+    padding: 25px;
+    margin: 20px;
+    font-size: 25px;
+    background-color: ivory;
+    color: #171717;
+    border-radius: 50px;
 }
