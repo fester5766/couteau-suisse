@@ -15,8 +15,8 @@
       <div class="calculatrice-container">
          <table class="calculatrice"> 
             <tr> 
-               <td colspan="3"><input id="output"/></td> 
-               <td id="c"><button onclick="effacer()">c</button></td> 
+               <td colspan="3"><input id="output" autofocus/></td> 
+               <td id="c"><button onclick="effacer()">C</button></td> 
             </tr> 
             <tr> 
                <td><button onclick="afficher('1')">1</button></td> 
@@ -39,12 +39,22 @@
             <tr>
                <td><button onclick="afficher('.')">.</button></td> 
                <td><button onclick="afficher('0')">0</button></td> 
-               <td><button onclick="calculer()">=</button></td> 
+               <td><button id="calcbutton" onclick="calculer()">=</button></td> 
                <td><button onclick="afficher('/')">/</button></td> 
             </tr> 
          </table>
       </div> 
-      <script> 
+      <script>
+         // fonction permettant de détecter l'appui sur la touche entrée pour utiliser la touche =
+         var ouput = document.getElementById("ouput");
+
+         output.addEventListener("keypress", function(event) {
+         if (event.key === "Enter") {
+            event.preventDefault();
+            document.getElementById("calcbutton").click();
+         }
+         }); 
+
          //fonction qui évalue le chiffre et renvoie la sortie
          function calculer() 
          { 
